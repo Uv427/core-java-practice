@@ -10,13 +10,13 @@ public class InterviewQuestions {
 
         //Given a list of integers, find out all the numbers starting with 1 using Stream functions?
         List<String> startsWith1 = myList.stream().map(number -> number + "").filter(num -> num.startsWith("1")).collect(Collectors.toList());
-        System.out.println(startsWith1);
+        System.out.println("startsWith1 "+ startsWith1);
         Set<Integer> hashset = new HashSet<>();
 
         //How to find duplicate elements in a given integers list in java using Stream functions?
         List<Integer> duplicates = myList.stream().
-                filter(n -> !hashset.add(n)).collect(Collectors.toList());
-        System.out.println(duplicates);
+                filter(n -> !hashset.add(n)).toList();
+        System.out.println("duplicates "+ duplicates);
 
        // Given the list of integers, find the first element of the list using Stream functions?
         myList.stream().findFirst().ifPresent(System.out::println);
@@ -29,10 +29,10 @@ public class InterviewQuestions {
 
         //Given a list of integers, find the minimum value element present in it using Stream functions?
         System.out.println("Min Number " + myList.stream().min(Integer::compare).get());
-        System.out.println("Min Number option 2" + myList.stream().reduce(Integer::min));
+        System.out.println("Min Number option II " + myList.stream().reduce(Integer::min).get());
 
         //Given a String, find the first non-repeated character in it using Stream functions?
-       System.out.println("Non repeat "+ myList.stream().map(e->e+"").distinct().collect(Collectors.toList()));
+       System.out.println("Non repeat "+ myList.stream().map(e->e+"").distinct().toList());
         //How do you sort a list of objects using Java 8 Comparator?
         List<Employee> employees = Arrays.asList(
                 new Employee(1, 30, "John", "HR", Collections.emptyList()),
