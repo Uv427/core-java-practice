@@ -1,0 +1,55 @@
+# Default ignored files
+/shelf/
+./.idea/workspace.xml
+# Environment-dependent path to Maven home directory
+/mavenHomeManager.xml
+.idea/
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Log files
+*.log
+logs/
+target/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+
+# IDE files and directories
+.idea/
+.project
+.classpath
+.settings/
+.STS4/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Sensitive files
+application*.properties
+application*.yml
+!application-dev.properties
+!application-dev.yml
+mvnw
+mvnw.cmd
